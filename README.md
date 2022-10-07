@@ -74,7 +74,7 @@ geom_histogram() +
 labs(title= "Distribution of alcohol consumption levels from 0 (Never) 8 (Everyday)", x= "Alcohol Consumption", y= "Count", caption= "Never - 0 \n Once-Twice/year - 1 \n 3-6 times/year - 2 \n 7-11 times/year - 3 \n Once/week - 4 \n Twice/week - 5 \n 3-4 times/week - 6 \n Nearly everyday - 7 \n Everyday - 8 ") +
 theme(legend.text = element_text(size = 8), axis.line = element_line(size = 0.25, colour = "black"), axis.text = element_text(colour = "blue"))
 ```
-![]()
+![](https://scontent.xx.fbcdn.net/v/t1.15752-9/301829786_5412656782184178_1830879729861832654_n.png?stp=dst-png_s720x720&_nc_cat=108&ccb=1-7&_nc_sid=aee45a&_nc_ohc=2iXh50e3ny0AX-XFjPI&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVLIj7_73GyLLApkecluXijdfWH3kBVBdaf7WJaW19Zdlg&oe=636627B3)
 The distribution of alcohol consumption levels from 0 to 8 is not normal but skewed to the right. The highest frequency is around 25. And also from the summary of data, we can see the mean of alcohol consumption is about 2.46.
 
 ```{r}
