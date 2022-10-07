@@ -75,6 +75,7 @@ labs(title= "Distribution of alcohol consumption levels from 0 (Never) 8 (Everyd
 theme(legend.text = element_text(size = 8), axis.line = element_line(size = 0.25, colour = "black"), axis.text = element_text(colour = "blue"))
 ```
 ![](https://scontent.xx.fbcdn.net/v/t1.15752-9/301829786_5412656782184178_1830879729861832654_n.png?stp=dst-png_s720x720&_nc_cat=108&ccb=1-7&_nc_sid=aee45a&_nc_ohc=2iXh50e3ny0AX-XFjPI&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVLIj7_73GyLLApkecluXijdfWH3kBVBdaf7WJaW19Zdlg&oe=636627B3)
+<br />
 The distribution of alcohol consumption levels from 0 to 8 is not normal but skewed to the right. The highest frequency is around 25. And also from the summary of data, we can see the mean of alcohol consumption is about 2.46.
 
 ```{r}
