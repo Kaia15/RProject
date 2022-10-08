@@ -96,7 +96,12 @@ summary(Data)
 table(Data$drinking.frequency)
 table(Data$sex)
 ```
-	
+
+![](https://scontent.xx.fbcdn.net/v/t1.15752-9/310183241_641210860705461_7617317514058197974_n.png?stp=dst-png_p403x403&_nc_cat=105&ccb=1-7&_nc_sid=aee45a&_nc_ohc=sFvNlis-iSsAX_dyEN3&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVJBJ6q_Q0s0zMq08s9VwrFYH4VoTAnpEB5zp18qSzhcog&oe=63657C67)
+
+![](https://scontent.xx.fbcdn.net/v/t1.15752-9/310068624_774529610484068_5931429814666531111_n.png?stp=dst-png_s552x414&_nc_cat=100&ccb=1-7&_nc_sid=aee45a&_nc_ohc=pSLnhtxtwQ0AX91j8Ss&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVJrrog135aLIgbsP_861XkebKtV2ZkTS6k4migmzAjNFg&oe=6367C586)
+<br />
+
 The first four histograms describe the distributions of the grading scores based on perfectionism. Both of the distribution of self critical and rigid perfectionism is quite normally distributed, with their highest frequencies at around 60 and 50. In the two other plots about other critical and narcissistic, the distribution of them are not normal, but skewed right. The highest frequency in the other critical distribution is roughly 80, while that of narcissistic is nearly 130.
 
 Most of the distributions in the next four histograms are skewed to the right, except for perceived social support. The highest frequencies of alcohol consumption, coping depression, and conformity are nearly 70, 150, and 160, respectively. Meanwhile, the distribution of perceived social support is skewed to the left, with the highest frequency of around 100. 
@@ -123,6 +128,15 @@ ggpairs(Femaledata, columns=c("perceived.social.support","self.critical","rigid"
 #Males
 ggpairs(Maledata, columns=c("perceived.social.support","self.critical","rigid","narcissistic", "other.critical", "alcohol.consumption", "conformity", "coping.depression", "drinking.frequency")) + labs(title= "Males") + theme(plot.title = element_text(size = 7))
 ```
+
+![](https://scontent.xx.fbcdn.net/v/t1.15752-9/310238654_631193618385185_6049716995338180781_n.png?stp=dst-png_p403x403&_nc_cat=103&ccb=1-7&_nc_sid=aee45a&_nc_ohc=4wbpy2o8OQEAX_9BuVs&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVJavrtWsz1zp2hpEIZMbht6ix1TklNz1rhinJ9paAI0_w&oe=6367FCD7)
+
+![](https://scontent.xx.fbcdn.net/v/t1.15752-9/309801222_475990451213012_8104433477296601595_n.png?stp=dst-png_p403x403&_nc_cat=102&ccb=1-7&_nc_sid=aee45a&_nc_ohc=VbhHCoDAuCkAX_6xq4e&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVI1SL0Aji87A9JpqTDkxXywWIcVuqrVSxcal5yH94xBJA&oe=6366A0E8)
+
+![](https://scontent.xx.fbcdn.net/v/t1.15752-9/309022836_1284906755669147_4564157068289392724_n.png?stp=dst-png_p403x403&_nc_cat=111&ccb=1-7&_nc_sid=aee45a&_nc_ohc=l5Wbj6W7-xoAX_ySXeM&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVJeobmBj-MMNMgGA15ID-jN7dwRIKDzdYdHqOjjzepvyA&oe=63677675)
+
+![](https://scontent.xx.fbcdn.net/v/t1.15752-9/310976951_1154374382099006_379926723069233775_n.png?stp=dst-png_p403x403&_nc_cat=107&ccb=1-7&_nc_sid=aee45a&_nc_ohc=XsvV-872KmUAX9F0ho6&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVJmLm2j1jSWLN3X9az977ezQ2k_bPwEEc8070qBSqyBbA&oe=6367B506)
+<br />
 
 ## Perfectionism types
 
@@ -181,6 +195,9 @@ Model4 <- linear_reg() %>% set_engine("lm") %>%
   fit(alcohol.consumption~self.critical, data=Data)
 summary(Model4$fit)
 ```
+![](https://scontent.xx.fbcdn.net/v/t1.15752-9/308658812_664033028631266_9210878950674658792_n.png?stp=dst-png_p403x403&_nc_cat=108&ccb=1-7&_nc_sid=aee45a&_nc_ohc=Zz8aXooUhgAAX-XirV7&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVKqhluvu6lm8oIIKoXA1p8j6HwE2xS48RsuSnZaDYkxjw&oe=6364B5EE)
+
+![](https://scontent.xx.fbcdn.net/v/t1.15752-9/308804130_1435949900229403_7564895523528700284_n.png?stp=dst-png_s552x414&_nc_cat=101&ccb=1-7&_nc_sid=aee45a&_nc_ohc=4H8kkEn0lrIAX8QI432&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVKvfhICSYAjAeaJbhBQKWz3uw7NFSElj_g3-klSLQAgrg&oe=63647BA8)
 
 Between narcissistic type and alcohol consumption, there’s a statistically significant positive correlation; r= 0.24; p<.0001. The relationship is not strong, however. A young adult that reports higher narcissistic perfectionism is likely to report high drinking frequency. The regression model shows that narcissistic type is a significant predictor for drinking but its contribution is very small; F(1 and 239)= 14.65, p<.0001; R^2= 0.058. The median residual is close to 0. This means that the model fits the data quite well. Narcissism accounts for 5.8% in the variation of alcohol consumption frequency in young adults. With a coefficient of 0.33201, 1-point increase in narcissistic score predicts that the drinking frequency increases by 0.33201 point. 
 
@@ -215,6 +232,13 @@ autoplot(lm(alcohol.consumption~rigid, data=Data))
 gg_reshist(lm(alcohol.consumption~rigid, data=Data)) +
   scale_y_log10()
 ```
+
+![](https://scontent.fosu1-1.fna.fbcdn.net/v/t1.15752-9/309280938_1234413650448491_1103094912105093564_n.png?_nc_cat=103&ccb=1-7&_nc_sid=ae9488&_nc_ohc=e1faklFKlGIAX-DWXua&_nc_ht=scontent.fosu1-1.fna&oh=03_AVKvUo7bbkiFuGX6018XefIQU9eF1ZK12BAdPq86pyVuLw&oe=636664A1)
+
+![](https://scontent.xx.fbcdn.net/v/t1.15752-9/309479051_454245843521074_1535745521482487992_n.png?stp=dst-png_p403x403&_nc_cat=101&ccb=1-7&_nc_sid=aee45a&_nc_ohc=IfqcfCdncKMAX8EbLRn&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVL7dQJ98a4fMxe44GshQCdgfXydqs3SVNR6UfJ2hUr0Tw&oe=6367728C)
+
+
+<br />
 
 The Residuals vs. Fitted plots for all 4 models show a mostly straight and flat blue line that matches the grey dashed line. This supports that the residuals (difference between an observed point and the regression line) stay the same across the fitted values (alcohol consumption values predicted by the regression line corresponding with the perfectionism scores). There is almost no non-linearity, unequal error variances, and outliers, supporting that our models are valid. Normal Q-Q plots for 4 models show that the points are mostly on or close to the line, indicating that the data is normally distributed. Scale-Location plots for 4 models show no clear pattern and relatively flat lines, indicating homoscedasticity - variances of residuals are equal across fitted values. Residuals vs Leverage plots show several outstanding and influential points for 4 models. Removing these points may be able to change the model coefficients drastically. 
 
@@ -274,6 +298,10 @@ ggplot(Data,aes(drinking.frequency, other.critical, fill=sex)) + geom_boxplot(no
 
 ```
 
+![](https://scontent.xx.fbcdn.net/v/t1.15752-9/308201875_1267794793987564_4064649764342652680_n.png?stp=dst-png_p403x403&_nc_cat=100&ccb=1-7&_nc_sid=aee45a&_nc_ohc=ZuPHVDDnsYQAX9qhOcZ&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVIVEw1dCvgLg_9l-S5578_QqaLOLULcY8K_mFCmsbfUHg&oe=636645A7)
+
+![](https://scontent.xx.fbcdn.net/v/t1.15752-9/308389184_3175822989396292_8985927985249383814_n.png?stp=dst-png_p403x403&_nc_cat=102&ccb=1-7&_nc_sid=aee45a&_nc_ohc=8piJ2PVSgKoAX8bfwxU&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVK7Jki97oLHDzJbllACYUks-WD3FLEFy7ZQ28bOdQrNfQ&oe=636617A3)
+
 From previous findings, we would expect that the higher drinking frequency level would come along with higher narcissism and higher other-critical perfectionism. The boxplot for the distribution of narcissism throughout levels of drinking.frequency is shown. The high drinking level is too small for males and has an inside out shape for females, indicating that its distribution is very skewed and its sample is very small for both sexes. We’ll not take into account this drinking level. The moderate drinking level has a higher middle 50% range in narcissism than the low drinking level. For females, the boxplot notches of those 2 levels are wide and overlapped, implying that the 95% confidence intervals for median overlap, indicating their medians are close to each other. The fact that the median confidence intervals are also wide is because there are various hypothesized values for medians. Also, the boxplot for female low drinking level has an inside-out shape, so their sample is skewed and small. Meanwhile for males, the notches are smaller and not overlapped, indicating that their medians are very different. Median is the middle value between the lowest and highest 50% of the values. Therefore, overall, the middle value of narcissism in males with low drinking frequency is significantly lower than that in males with moderate drinking frequency. But it’s not significant for females. 
 The boxplot for other-critical perfectionism and drinking frequency also shows a similar pattern. The high drinking level won’t be taken into account because of their inside-out shape that’s indicative of a skewed and small sample. The moderate level shows higher narcissism than the low level with the median confidence intervals don’t overlap for males but not for females. Therefore, overall, the middle score of other-critical perfectionism in males with low drinking frequency is significantly lower than that in males with moderate drinking frequency. But it’s not significant for females. 
 
@@ -308,6 +336,9 @@ Both ggpairs for males and females showed that there is no significant correlati
 ggplot(Mean,aes(x=drinking.frequency, y= social.support.mean, fill=drinking.frequency)) + geom_col() + facet_grid(~sex) +
     labs(title = "Average perceived social support and Drinking frequency", y= "Mean perceived social support", x= "Drinking frequency") 
 ```
+![](https://scontent.xx.fbcdn.net/v/t1.15752-9/308985305_4031339716990130_1780034553613951124_n.png?stp=dst-png_p403x403&_nc_cat=111&ccb=1-7&_nc_sid=aee45a&_nc_ohc=vA0jlk3kP_YAX_0eVo6&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVLuTocqOEprakoWpX7JDz_tkd9BqR9j4xEVQOaRD7BJ6Q&oe=63675BB2
+)
+<br />
 
 The column graph revealed that interestingly for males, those with high drinking frequency perceive more social support than those with low level and moderate level (which has the least social support). Meanwhile, for females, those with the moderate drinking level perceive more social support than those with other levels. The high drinking frequency comes with the lowest social support. 
 
